@@ -11,6 +11,7 @@
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
+    "jquery": "^3.4.1",
     "local-storage-fallback": "^4.1.1",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.9.0",
@@ -19,6 +20,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "reactstrap": "^8.4.1",
+    "resolve-url-loader": "^3.1.1",
     "styled-components": "^5.1.0",
     "styled-theming": "^2.2.0"
   },
@@ -42,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "bootstrap-loader": "^3.0.4",
+    "tether": "^1.4.7"
   }
 }

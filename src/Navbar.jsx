@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import "../node_modules/bootstrap/dist/js/bootstrap";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-light ">
@@ -13,7 +14,7 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
-          <ul className="navbar-nav ml-auto mr-auto">
+          <ul className="navbar-nav mr-auto ml-auto">
             {/* <li className="nav-item">
               <NavLink to="/" className="nav-link">
                 <span className="link-name py-1">Home</span>
@@ -29,6 +30,11 @@ const Navbar = () => {
                 <span className="link-name py-1">Global Stats</span>
               </NavLink>
             </li>
+            {/* <li className="nav-item">
+              <NavLink to="/team" className="nav-link">
+                <span className="link-name py-1">Developers</span>
+              </NavLink>
+            </li> */}
           </ul>
         </div>
       </div>
