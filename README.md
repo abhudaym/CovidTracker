@@ -1,7 +1,13 @@
 ## COVID-19 TRACKER
 
-In the project directory, you can run:
+This coronavirus tracking web application is made using reactjs. This website displays the information using charts for every different country and states in India affected by it. It fetches data from these amazing apis:
 
+https://covid19.mathdro.id/api
+
+https://api.covid19india.org/data.json
+
+
+To run this on your machine locally, in your project directory run:
 ### `npm start`
 
 Runs the app in the development mode.<br />
