@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
+import CountUp from "react-countup";
 import styles from "./Cards.module.css";
 import cx from "classnames";
 
@@ -72,7 +73,12 @@ const Cards = ({ state }) => {
               Infected
             </Typography>
             <Typography variant="h5">
-              {confirmed}
+            <CountUp
+                start={0}
+                end={confirmed}
+                duration={2.5}
+                separator=","
+              />
             </Typography>
             <Typography color="textSecondary">
               {time}
@@ -87,7 +93,12 @@ const Cards = ({ state }) => {
             <Typography color="textSecondary" gutterBottom>
               Recovered
             </Typography>
-            <Typography variant="h5">{recovered}</Typography>
+            <Typography variant="h5"><CountUp
+                start={0}
+                end={recovered}
+                duration={2.0}
+                separator=","
+              /></Typography>
             <Typography color="textSecondary">
               {time}
             </Typography>
@@ -101,7 +112,12 @@ const Cards = ({ state }) => {
             <Typography color="textSecondary" gutterBottom>
               Deaths
             </Typography>
-            <Typography variant="h5">{deaths}</Typography>
+            <Typography variant="h5"><CountUp
+                start={0}
+                end={deaths}
+                duration={1.5}
+                separator=","
+              /></Typography>
             <Typography color="textSecondary">
               {time}
             </Typography>
