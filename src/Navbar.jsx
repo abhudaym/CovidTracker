@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-import "../node_modules/bootstrap/dist/js/bootstrap";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-light " style={{backgroundColor: 'transparent'}}>
