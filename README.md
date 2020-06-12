@@ -8,6 +8,11 @@ https://api.covid19india.org/data.json
 
 
 To run this on your machine locally, in your project directory run:
+
+### `npm install`
+
+And then:
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
