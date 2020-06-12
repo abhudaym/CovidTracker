@@ -4,7 +4,7 @@ import "./Navbar.css";
 import "../node_modules/bootstrap/dist/js/bootstrap";
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-light ">
+    <nav className="navbar navbar-expand-sm navbar-light " style={{backgroundColor: 'transparent'}}>
       <div className="container">
         <button
           className="navbar-toggler"

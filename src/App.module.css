@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(250,250,250);
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 
 .container{
@@ -22,4 +22,11 @@ body{
     .image{
         width: 100%;
     }
-}
+
+} 
+
+@media only screen and (max-width: 600px) {
+    h2{
+        font-size: 1.70rem !important;
+    }
+  }

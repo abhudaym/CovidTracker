@@ -6,6 +6,8 @@ import Footer from './World/components/Footer/Footer';
 import styles from './App.module.css';
 import {fetchData} from './api';
 import covidImage from './images/covid.png';
+import Lottie from 'react-lottie';
+import animationData from './images/18168-stay-safe-stay-home.json';
 
 
 class World extends React.Component {
@@ -28,11 +30,20 @@ class World extends React.Component {
   }
 
   render(){
+    const defaultOptions = {
+      loop: true,
+        autoplay: true, 
+        animationData: animationData,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice'
+        }
+    }
+  
     const { data , country } = this.state;
 
     return (
       <div className={styles.container}>
-        <img src={covidImage} className={styles.image} alt="Covid19"/>
+        <span className={covidImage}><Lottie options={defaultOptions} width={200} height={200} /></span> 
         <Cards data={data} />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Charts data={data} country={country} />
