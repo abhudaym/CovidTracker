@@ -6,7 +6,7 @@ import styles from './Footer.module.css';
 function Footer(){
     return (
 <div className={styles.footer}>
-    <p><em>Made with ❤️ by <a href="https://www.linkedin.com/company/aakash-research-labs/">Aakash Research Labs</a></em></p>
+    <p><em>Made with ❤️ by <a href="https://www.linkedin.com/in/abhudaym/">Abhuday Mishra</a></em></p>
 </div> 
 );
 }
