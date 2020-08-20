@@ -5,7 +5,6 @@ import CountUp from "react-countup";
 import styles from "./Cards.module.css";
 import cx from "classnames";
 
-
 const useStats = () => {
   const [results, setResults] = useState(" ");
   const url = "https://api.covid19india.org/data.json";
@@ -20,41 +19,26 @@ const useStats = () => {
 };
 
 const Cards = ({ state }) => {
-  const url = "https://api.covid19india.org/data.json";
-  const [results, setResults] = useState(" ");
-  // const fetchData = async() => {
-  //     try {
-  //         const res = await axios.get(url);
-  //         setResults(res.data.statewise);
-  //         console.log(res.data.statewise);
-  //     } catch (error) {
-  //         console.log(error);
-  //     }
-  // }
-  // useEffect(() => {
-  //     fetchData();
-  // }, [])
-
   const stats = useStats();
   var confirmed = "";
   var recovered = "";
   var deaths = "";
   var time = "";
-  Object.keys(stats).forEach(element => {
-      if(state === stats[element].state){
-          confirmed = stats[element].confirmed;
-          recovered = stats[element].recovered;
-          deaths = stats[element].deaths;
-          time = stats[element].lastupdatedtime;
-      }
+  Object.keys(stats).forEach((element) => {
+    if (state === stats[element].state) {
+      confirmed = stats[element].confirmed;
+      recovered = stats[element].recovered;
+      deaths = stats[element].deaths;
+      time = stats[element].lastupdatedtime;
+    }
   });
-//   var i=0;
-//   for( i=0 ; i<38 ; i++ ){
-//       if(state = stats[37].confirmed)
-//       {
-//           console.log("EQUAL!");
-//       }
-//   }
+  //   var i=0;
+  //   for( i=0 ; i<38 ; i++ ){
+  //       if(state = stats[37].confirmed)
+  //       {
+  //           console.log("EQUAL!");
+  //       }
+  //   }
 
   // console.log(stats);
   return (
@@ -67,69 +51,69 @@ const Cards = ({ state }) => {
 
     <div className={styles.container}>
       <Grid container spacing={3} justify="center">
-        <Grid item component={Card} xs={12} md={3} className={cx(styles.card,styles.infected)}>
+        <Grid
+          item
+          component={Card}
+          xs={12}
+          md={3}
+          className={cx(styles.card, styles.infected)}
+        >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Infected
             </Typography>
             <Typography variant="h5">
-            <CountUp
-                start={0}
-                end={confirmed}
-                duration={2.5}
-                separator=","
-              />
+              <CountUp start={0} end={confirmed} duration={2.5} separator="," />
             </Typography>
-            <Typography color="textSecondary">
-              {time}
-            </Typography>
+            <Typography color="textSecondary">{time}</Typography>
             <Typography variant="body2">
               Number of confirmed cases of COVID 19
             </Typography>
           </CardContent>
         </Grid>
-        <Grid item component={Card} xs={12} md={3} className={cx(styles.card,styles.recovered)}>
+        <Grid
+          item
+          component={Card}
+          xs={12}
+          md={3}
+          className={cx(styles.card, styles.recovered)}
+        >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Recovered
             </Typography>
-            <Typography variant="h5"><CountUp
-                start={0}
-                end={recovered}
-                duration={2.0}
-                separator=","
-              /></Typography>
-            <Typography color="textSecondary">
-              {time}
+            <Typography variant="h5">
+              <CountUp start={0} end={recovered} duration={2.0} separator="," />
             </Typography>
+            <Typography color="textSecondary">{time}</Typography>
             <Typography variant="body2">
               Number of recovered cases of COVID 19
             </Typography>
           </CardContent>
         </Grid>
-        <Grid item component={Card} xs={12} md={3} className={cx(styles.card,styles.deaths)}>
+        <Grid
+          item
+          component={Card}
+          xs={12}
+          md={3}
+          className={cx(styles.card, styles.deaths)}
+        >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Deaths
             </Typography>
-            <Typography variant="h5"><CountUp
-                start={0}
-                end={deaths}
-                duration={1.5}
-                separator=","
-              /></Typography>
-            <Typography color="textSecondary">
-              {time}
+            <Typography variant="h5">
+              <CountUp start={0} end={deaths} duration={1.5} separator="," />
             </Typography>
+            <Typography color="textSecondary">{time}</Typography>
             <Typography variant="body2">
               Number of deaths caused by COVID-19
             </Typography>
           </CardContent>
         </Grid>
       </Grid>
-      </div>
+    </div>
     ////////
-
   );
 };
 export default Cards;
