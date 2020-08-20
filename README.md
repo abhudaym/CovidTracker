@@ -6,6 +6,8 @@ https://covid19.mathdro.id/api
 
 https://api.covid19india.org/data.json
 
+I would also like to mention this amazing tutorial which helped me a lot in building this: https://www.youtube.com/watch?v=khJlrj3Y6Ls
+
 
 To run this on your machine locally, in your project directory run:
 
